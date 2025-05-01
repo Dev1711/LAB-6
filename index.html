@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunrise and Sunset</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="hero">
+    <div class="overlay-box">
+      <img src="logo.png" alt="Sun Icon" class="sun-icon" />
+      <h1>Sunrise and Sunset</h1>
+      <p>Select a city or use your location to get sun timings:</p>
+      <select id="citySelect" onchange="getCityData()">
+        <option value="" disabled selected>Select-the-city</option>
+        <option value="40.7128,-74.0060">New York, United States</option>
+        <option value="28.6139,77.2090">Delhi, India</option>
+        <option value="19.0760,72.8777">Mumbai, India</option>
+        <option value="36.7783,-119.4179">California, United States</option>
+        <option value="39.9612,-82.9988">Ohio, United States</option>
+        <option value="39.1031,-84.5120">Cincinnati, United States</option>
+        <option value="35.7796,-78.6382">Raleigh, United States</option>
+        <option value="30.2672,-97.7431">Austin, United States</option>
+        <option value="23.0225,72.5714">Ahmedabad, India</option>
+        <option value="22.5726,88.3639">Kolkata, India</option>
+        <option value="27.9944,-81.7603">Florida, United States</option>
+        <option value="39.9526,-75.1652">Philadelphia, United States</option>
+      </select>
+      <button onclick="getLocationData()">Use My Current Location</button>
+    </div>
+  </div>
+
+  <main class="content-section">
+    <h2>Today's Information</h2>
+    <div id="today" class="info-box">Please select a city or use your location.</div>
+
+    <h2>Tomorrow's Information</h2>
+    <div id="tomorrow" class="info-box">Please select a city or use your location.</div>
+  </main>
+
+  <footer>
+    API data provided by <a href="https://sunrisesunset.io" target="_blank">SunriseSunset.io</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
